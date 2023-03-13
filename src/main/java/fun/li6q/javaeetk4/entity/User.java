@@ -1,4 +1,4 @@
-package fun.li6q.javaeetk4;
+package fun.li6q.javaeetk4.entity;
 
 import jakarta.persistence.*;
 

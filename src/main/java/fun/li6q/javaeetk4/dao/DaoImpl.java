@@ -1,5 +1,6 @@
-package fun.li6q.javaeetk4;
+package fun.li6q.javaeetk4.dao;
 
+import fun.li6q.javaeetk4.entity.User;
 import jakarta.ejb.Stateful;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;

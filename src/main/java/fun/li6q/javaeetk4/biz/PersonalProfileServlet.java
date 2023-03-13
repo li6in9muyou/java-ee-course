@@ -1,5 +1,6 @@
-package fun.li6q.javaeetk4;
+package fun.li6q.javaeetk4.biz;
 
+import fun.li6q.javaeetk4.entity.User;
 import jakarta.inject.Named;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
