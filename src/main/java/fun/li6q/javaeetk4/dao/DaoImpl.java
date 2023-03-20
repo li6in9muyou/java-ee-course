@@ -9,6 +9,9 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.NoResultException;
 import jakarta.persistence.Query;
 
+import java.util.List;
+import java.util.Vector;
+
 @Named
 @Stateful
 @ApplicationScoped
@@ -35,5 +38,22 @@ public class DaoImpl implements Dao {
         User u = new User(displayName, password);
         db.persist(u);
         return u;
+    }
+
+    @Override
+    public Vector<User> listAllUser() {
+        try {
+            Query query = db.createQuery(
+                    "select id, displayName from User"
+            );
+            List<Object[]> rows = (List<Object[]>) query.getResultList();
+            Vector<User> vector = new Vector<>();
+            for (Object[] row : rows) {
+                vector.add(new User((Long) row[0], (String) row[1], ""));
+            }
+            return vector;
+        } catch (NoResultException e) {
+            return null;
+        }
     }
 }
