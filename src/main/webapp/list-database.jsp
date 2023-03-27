@@ -5,9 +5,8 @@
 </head>
 <body>
 <h1>数据库列表</h1>
-<p>
 <pre>
-${text}</p>
+    ${text}
 </pre>
 </body>
 </html>
